@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.side-bar{
+  background-color: #282c34;
+  min-width: 200px;
+  color: white;
+}
