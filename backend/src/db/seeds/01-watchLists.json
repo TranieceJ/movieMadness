@@ -1,0 +1,37 @@
+[
+  {
+    "watchList_name": "Horror",
+    "movie_ids": "30,39,20",
+    "user_id": 5,
+    "created_at": "2022-12-10T08:30:32.326Z",
+    "updated_at": "2022-12-10T08:30:32.326Z"
+  },
+  {
+    "watchList_name": "Future Dates",
+    "movie_ids": "40,45,48",
+    "user_id": 4,
+    "created_at": "2022-12-10T08:31:32.326Z",
+    "updated_at": "2022-12-10T08:31:32.326Z"
+  },
+  {
+    "watchList_name": "Hopeless Romantic",
+    "movie_ids": "54,57,59",
+    "user_id": 1,
+    "created_at": "2022-12-10T08:31:32.326Z",
+    "updated_at": "2022-12-10T08:31:32.326Z"
+  },
+  {
+    "watchList_name": "What's wrong with you type movies",
+    "movie_ids": "324,390,405",
+    "user_id": 3,
+    "created_at": "2022-12-10T08:31:32.326Z",
+    "updated_at": "2022-12-10T08:31:32.326Z"
+  },
+  {
+    "watchList_name": "On my villain arc type movies",
+    "movie_ids": "189,234,456",
+    "user_id": 2,
+    "created_at": "2022-12-10T08:31:32.326Z",
+    "updated_at": "2022-12-10T08:31:32.326Z"
+  }
+]
