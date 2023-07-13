@@ -39,6 +39,11 @@ function hasUser_id(req, res, next) {
 
 // CRUD 
 
+async function listAll(req, res) {
+    const data = await service.listAll();
+    res.json({data});
+}
+
 async function list(req, res) {
     const user_id = req.params.user_id;
     const data = await service.list(user_id);
@@ -73,6 +78,7 @@ function read(req, res) {
 // }
 
 module.exports = {
+    listAll: asyncErrorBoundary(listAll),
     list: asyncErrorBoundary(list),
     read: [asyncErrorBoundary(watchListIdExists), watchListIdIsMadeByCorrectUser, read],
     create: [hasName, hasUser_id, asyncErrorBoundary(create)]

@@ -1,5 +1,9 @@
 const knex = require("../db/connection");
 
+function listAll() {
+    return knex("watchLists").select("*");
+}
+
 function list(user_id) {
     return knex("watchLists")
     .select("*")
@@ -18,6 +22,7 @@ function read(watchList_id) {
 }
 
 module.exports = {
+    listAll,
     create,
     read,
     list, 

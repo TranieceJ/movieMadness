@@ -3,7 +3,7 @@
  * The default values is overridden by the `API_BASE_URL` environment variable.
  */
 const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "http://localhost:5001";
+  process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
 
   /**
  * Defines the default headers for these functions to work with `json-server`
@@ -48,10 +48,10 @@ async function fetchJson(url, options, onCancel) {
       }
       return Promise.resolve(onCancel);
     }
-  }
+}
 
-  export async function createUser(user, signal){
-    const url = `${API_BASE_URL}/user`;
+export async function createUser(user, signal){
+    const url = `${API_BASE_URL}/users`;
     const options = {
       method: "POST",
       headers,
@@ -60,4 +60,14 @@ async function fetchJson(url, options, onCancel) {
     };
 
     return await fetchJson(url,options, user)
-  }
+}
+
+export async function listWatchLists(user_id, signal) {
+    const url = new URL(`${API_BASE_URL}/users/${user_id}`);
+    return await fetchJson(url, {headers, signal}, [])
+}
+
+export async function listAllWatchLists(signal) {
+    const url = new URL(`${API_BASE_URL}/users`);
+    return await fetchJson(url, {headers, signal}, [])
+}
