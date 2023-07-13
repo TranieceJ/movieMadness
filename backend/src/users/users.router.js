@@ -11,6 +11,8 @@ router.route("/:user_id/watchLists").post(controller.create).all(methodNotAllowe
 // SPECIFIC USER 
 router.route("/:user_id").get(controller.list).all(methodNotAllowed);
 
+router.route("/").get(controller.listAll).all(methodNotAllowed)
+
 
 module.exports = router;
 
